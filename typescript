@@ -1,0 +1,92 @@
+Script started on Fri 02 Sep 2016 02:00:14 AM EDT
+bash-3.2$ ./doit ls -l
+total 276
+-rwxrwx--x 1 grbishop grbishop 14932 Sep  2 01:51 do
+-rwxrwx--x 1 grbishop grbishop  6400 Sep  1 22:04 do.c
+-rwxrwx--x 1 grbishop grbishop 17045 Sep  2 01:51 doit
+-rwxrwx--x 1 grbishop grbishop  6482 Sep  2 01:56 doit.c
+-rwxrwx--x 1 grbishop grbishop   141 Sep  1 20:31 makefile
+-rwxrwx--x 1 grbishop grbishop 10599 Sep  2 01:51 myfork
+-rwxrwx--x 1 grbishop grbishop   606 Aug 31 22:00 myfork.c
+-rwxrwx--x 1 grbishop grbishop     0 Sep  2 02:00 typescript
+Grandchild finished: (13978)
+1. CPU User Time: (ms): 0
+1. CPU System Time: (ms) 0
+3. Involuntary context switches: 13
+4. Voluntary context switches: 15
+5. Major page faults requiring disk I/O: 0
+6. Minor page faults satisfied by memory reclaimation: 309
+7. Maximum resident set size used (kb): 1000
+bash-3.2$ ./doit tree
+.
+|-- do
+|-- do.c
+|-- doit
+|-- doit.c
+|-- makefile
+|-- myfork
+|-- myfork.c
+`-- typescript
+
+0 directories, 8 files
+Grandchild finished: (15510)
+1. CPU User Time: (ms): 0
+1. CPU System Time: (ms) 0
+3. Involuntary context switches: 15
+4. Voluntary context switches: 11
+5. Major page faults requiring disk I/O: 0
+6. Minor page faults satisfied by memory reclaimation: 189
+7. Maximum resident set size used (kb): 592
+bash-3.2$ ./doit
+==>ls -l
+total 276
+-rwxrwx--x 1 grbishop grbishop 14932 Sep  2 01:51 do
+-rwxrwx--x 1 grbishop grbishop  6400 Sep  1 22:04 do.c
+-rwxrwx--x 1 grbishop grbishop 17045 Sep  2 01:51 doit
+-rwxrwx--x 1 grbishop grbishop  6482 Sep  2 01:56 doit.c
+-rwxrwx--x 1 grbishop grbishop   141 Sep  1 20:31 makefile
+-rwxrwx--x 1 grbishop grbishop 10599 Sep  2 01:51 myfork
+-rwxrwx--x 1 grbishop grbishop   606 Aug 31 22:00 myfork.c
+-rwxrwx--x 1 grbishop grbishop     0 Sep  2 02:00 typescript
+Grandchild finished: (21496)
+1. CPU User Time: (ms): 0
+1. CPU System Time: (ms) 0
+3. Involuntary context switches: 13
+4. Voluntary context switches: 7
+5. Major page faults requiring disk I/O: 0
+6. Minor page faults satisfied by memory reclaimation: 310
+7. Maximum resident set size used (kb): 1004
+==>ls -l &
+[1] 21495 ls Completed.
+==>total 276
+-rwxrwx--x 1 grbishop grbishop 14932 Sep  2 01:51 do
+-rwxrwx--x 1 grbishop grbishop  6400 Sep  1 22:04 do.c
+-rwxrwx--x 1 grbishop grbishop 17045 Sep  2 01:51 doit
+-rwxrwx--x 1 grbishop grbishop  6482 Sep  2 01:56 doit.c
+-rwxrwx--x 1 grbishop grbishop   141 Sep  1 20:31 makefile
+-rwxrwx--x 1 grbishop grbishop 10599 Sep  2 01:51 myfork
+-rwxrwx--x 1 grbishop grbishop   606 Aug 31 22:00 myfork.c
+-rwxrwx--x 1 grbishop grbishop     0 Sep  2 02:00 typescript
+Grandchild finished: (23248)
+1. CPU User Time: (ms): 0
+1. CPU System Time: (ms) 0
+3. Involuntary context switches: 4
+4. Voluntary context switches: 21
+5. Major page faults requiring disk I/O: 0
+6. Minor page faults satisfied by memory reclaimation: 309
+7. Maximum resident set size used (kb): 1000
+exit    ch d ..     cat do      ls    sleep 1 &
+[1] 21495  Completed.
+==>Grandchild finished: (32528)
+1. CPU User Time: (ms): 0
+1. CPU System Time: (ms) 0
+3. Involuntary context switches: 0
+4. Voluntary context switches: 2
+5. Major page faults requiring disk I/O: 0
+6. Minor page faults satisfied by memory reclaimation: 174
+7. Maximum resident set size used (kb): 532
+exit
+bash-3.2$ exit
+exit
+
+Script done on Fri 02 Sep 2016 02:02:17 AM EDT
